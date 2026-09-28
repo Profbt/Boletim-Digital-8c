@@ -1,0 +1,191 @@
+/* ===== VARIÁVEIS DE COR ===== */
+:root {
+  --laranja: #ff7a18;
+  --laranja-escuro: #e0650a;
+  --verde: #22a06b;
+  --verde-claro: #e6f7ef;
+  --laranja-claro: #fff1e3;
+  --cinza-fundo: #f7f8fa;
+  --cinza-texto: #333;
+  --cinza-borda: #e3e6eb;
+}
+
+/* ===== RESET BÁSICO ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--cinza-fundo);
+  color: var(--cinza-texto);
+  line-height: 1.5;
+  padding-bottom: 40px;
+}
+
+/* ===== CABEÇALHO ===== */
+.cabecalho {
+  background: linear-gradient(135deg, var(--laranja), var(--laranja-escuro));
+  color: #fff;
+  text-align: center;
+  padding: 28px 16px;
+  box-shadow: 0 4px 12px rgba(255, 122, 24, 0.3);
+}
+
+.cabecalho h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.subtitulo {
+  font-size: 1rem;
+  margin-top: 4px;
+  opacity: 0.95;
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+.conteudo {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* ===== CARDS DE RESUMO ===== */
+.cards-resumo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 14px;
+  padding: 18px;
+  border-left: 6px solid var(--laranja);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.card-verde {
+  border-left-color: var(--verde);
+}
+
+.card-titulo {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.card-valor {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--laranja-escuro);
+}
+
+.card-verde .card-valor {
+  color: var(--verde);
+}
+
+.card-descricao {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* ===== ÁREA DA TABELA ===== */
+.area-tabela h2 {
+  color: var(--laranja-escuro);
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+.tabela-responsiva {
+  overflow-x: auto; /* Permite rolar de lado no celular */
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.tabela-boletim {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px; /* Garante que a tabela não fique espremida */
+}
+
+.tabela-boletim thead {
+  background-color: var(--laranja);
+  color: #fff;
+}
+
+.tabela-boletim th,
+.tabela-boletim td {
+  padding: 12px 14px;
+  text-align: left;
+  font-size: 0.92rem;
+  border-bottom: 1px solid var(--cinza-borda);
+  white-space: nowrap;
+}
+
+.tabela-boletim tbody tr:hover {
+  background-color: var(--laranja-claro);
+}
+
+/* ===== ETIQUETAS DE SITUAÇÃO ===== */
+.situacao {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.situacao-bom {
+  background-color: var(--verde-claro);
+  color: var(--verde);
+}
+
+.situacao-atencao {
+  background-color: #ffe0e0;
+  color: #c0392b;
+}
+
+.situacao-neutra {
+  background-color: #eef0f3;
+  color: #666;
+}
+
+/* ===== RODAPÉ ===== */
+.rodape {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 32px;
+  padding: 0 16px;
+}
+
+/* ===== AJUSTES PARA CELULAR ===== */
+@media (max-width: 600px) {
+  .cabecalho h1 {
+    font-size: 1.6rem;
+  }
+
+  .card-valor {
+    font-size: 1.4rem;
+  }
+
+  .tabela-boletim th,
+  .tabela-boletim td {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+}
