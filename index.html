@@ -10,32 +10,67 @@
 
   <header class="cabecalho">
     <h1>Boletim Digital</h1>
-    <p class="subtitulo">8º Ano — Estudante Exemplo</p>
+    <p class="subtitulo">8º Ano — Turma 8C — Nº 42</p>
   </header>
 
   <main class="conteudo">
 
-    <section class="cards-resumo" id="cardsResumo"></section>
+    <!-- ÁREA DE ACESSO POR PIN -->
+    <section class="area-pin" id="areaPin">
+      <h2>Acesso ao boletim</h2>
+      <p class="area-pin-info">8º Ano — Turma 8C — Nº 42</p>
 
-    <section class="area-tabela">
-      <h2>Notas por disciplina</h2>
-
-      <div class="tabela-responsiva">
-        <table class="tabela-boletim">
-          <thead>
-            <tr>
-              <th>Disciplina</th>
-              <th>1º Tri</th>
-              <th>2º Tri</th>
-              <th>3º Tri</th>
-              <th>Média</th>
-              <th>Faltas</th>
-              <th>Situação</th>
-            </tr>
-          </thead>
-          <tbody id="corpoTabela"></tbody>
-        </table>
+      <div class="area-pin-campo">
+        <label for="campoPin">Digite seu PIN:</label>
+        <input
+          type="password"
+          id="campoPin"
+          inputmode="numeric"
+          autocomplete="off"
+          maxlength="12"
+          placeholder="PIN"
+        />
       </div>
+
+      <button type="button" id="botaoEntrar" class="botao-principal">Entrar</button>
+
+      <p class="area-pin-mensagem" id="mensagemPin"></p>
+    </section>
+
+    <!-- ÁREA DO BOLETIM (escondida até entrar) -->
+    <section class="area-boletim" id="areaBoletim" hidden>
+
+      <div class="barra-acoes">
+        <button type="button" id="botaoEditar" class="botao-secundario">Alterar dados</button>
+        <button type="button" id="botaoSalvar" class="botao-principal" hidden>Salvar alterações</button>
+        <button type="button" id="botaoCancelar" class="botao-secundario" hidden>Cancelar edição</button>
+      </div>
+
+      <p class="mensagem-acao" id="mensagemAcao"></p>
+
+      <section class="cards-resumo" id="cardsResumo"></section>
+
+      <section class="area-tabela">
+        <h2>Notas por disciplina</h2>
+
+        <div class="tabela-responsiva">
+          <table class="tabela-boletim">
+            <thead>
+              <tr>
+                <th>Disciplina</th>
+                <th>1º Tri</th>
+                <th>2º Tri</th>
+                <th>3º Tri</th>
+                <th>Média</th>
+                <th>Faltas</th>
+                <th>Situação</th>
+              </tr>
+            </thead>
+            <tbody id="corpoTabela"></tbody>
+          </table>
+        </div>
+      </section>
+
     </section>
 
   </main>

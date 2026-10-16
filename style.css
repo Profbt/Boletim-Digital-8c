@@ -110,7 +110,7 @@ body {
 }
 
 .tabela-responsiva {
-  overflow-x: auto; /* Permite rolar de lado no celular */
+  overflow-x: auto;
   background: #fff;
   border-radius: 14px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
@@ -119,7 +119,7 @@ body {
 .tabela-boletim {
   width: 100%;
   border-collapse: collapse;
-  min-width: 720px; /* Garante que a tabela não fique espremida */
+  min-width: 720px;
 }
 
 .tabela-boletim thead {
@@ -188,4 +188,144 @@ body {
     padding: 10px;
     font-size: 0.85rem;
   }
+}
+
+/* ===== ÁREA DE PIN ===== */
+.area-pin {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  border-left: 6px solid var(--laranja);
+  max-width: 420px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.area-pin h2 {
+  color: var(--laranja-escuro);
+  margin-bottom: 6px;
+  font-size: 1.3rem;
+}
+
+.area-pin-info {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 18px;
+}
+
+.area-pin-campo {
+  text-align: left;
+  margin-bottom: 14px;
+}
+
+.area-pin-campo label {
+  display: block;
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.area-pin-campo input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--cinza-borda);
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.area-pin-campo input:focus {
+  border-color: var(--laranja);
+}
+
+.area-pin-mensagem {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  min-height: 1.2em;
+}
+
+.mensagem-erro {
+  color: #c0392b;
+}
+
+.mensagem-ok {
+  color: var(--verde);
+}
+
+.mensagem-info {
+  color: #666;
+}
+
+/* ===== BOTÕES ===== */
+.botao-principal,
+.botao-secundario {
+  display: inline-block;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+.botao-principal {
+  background-color: var(--laranja);
+  color: #fff;
+}
+
+.botao-principal:hover {
+  background-color: var(--laranja-escuro);
+  transform: translateY(-1px);
+}
+
+.botao-principal:disabled {
+  background-color: #f0b892;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.botao-secundario {
+  background-color: var(--verde-claro);
+  color: var(--verde);
+}
+
+.botao-secundario:hover {
+  background-color: #d2efe1;
+  transform: translateY(-1px);
+}
+
+/* ===== BARRA DE AÇÕES DO BOLETIM ===== */
+.barra-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.mensagem-acao {
+  font-size: 0.9rem;
+  min-height: 1.2em;
+  margin-bottom: 16px;
+}
+
+/* ===== CAMPOS DE EDIÇÃO NA TABELA ===== */
+.campo-edicao {
+  width: 70px;
+  padding: 6px 8px;
+  border: 1px solid var(--cinza-borda);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.campo-edicao:focus {
+  border-color: var(--laranja);
+}
+
+.campo-edicao.campo-invalido {
+  border-color: #c0392b;
+  background-color: #ffe0e0;
 }
